@@ -9,16 +9,16 @@ docker-compose up -d --build
 pip install -r requirements.txt
 ```
 
-Для парсинга файла и загрузки его в postgres:
+Для работы сервиса:
 ```
-python upload_to_postgres.py
+python main.py 
 ```
 
-Для загрузки данных в ElasticSearch и поиска похожих объектов:
-```
-python fetch_and_find_similar.py
-```
-</br>
+Также среди аргументов можно выбрать:</br>
+--load_to_postgres 0 (Default 1) </br>
+--load_to_elastic 0 (Default 1) </br>
+--find_similar 0 (Default 1) </br>
+--file_size 50k (Default 5k) файл 50k.xml должен быть в папке с проектом</br>
 
 Далее прикладываю скриншоты результатов поиска схожих объектов: </br>
 ![alt text](https://github.com/insuperabilez/testovoe/blob/main/images/1.png?raw=true)
